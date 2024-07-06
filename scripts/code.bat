@@ -5,6 +5,9 @@ title VSCode Dev
 
 pushd %~dp0\..
 
+:: Wait 90 seconds to ensure yarn watch has time to load
+timeout /t 90 >nul
+
 :: Get electron, compile, built-in extensions
 if "%VSCODE_SKIP_PRELAUNCH%"=="" node build/lib/preLaunch.js
 

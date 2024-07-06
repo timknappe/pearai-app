@@ -181,14 +181,40 @@
 			}
 		},
 		{
-			"label": "Run Dev",
-			"type": "shell",
-			"command": "./scripts/code.sh",
-			"windows": {
-				"command": ".\\scripts\\code.bat"
-			},
-			"problemMatcher": []
-		},
+            "label": "Yarn Watch",
+            "type": "shell",
+            "command": "yarn watch",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run Dev",
+            "type": "shell",
+            "command": "./scripts/code.sh",
+            "windows": {
+                "command": ".\\scripts\\code.bat"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Start with hot reload",
+            "dependsOn": [
+                "Yarn Watch",
+                "Run Dev"
+            ],
+            "dependsOrder": "parallel"
+        },
 		{
 			"type": "npm",
 			"script": "electron",

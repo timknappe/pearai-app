@@ -2,6 +2,8 @@
 
 set -e
 
+sleep 90
+
 cd extensions/pearai-submodule
 ./scripts/build-extension.sh
 cd ../..

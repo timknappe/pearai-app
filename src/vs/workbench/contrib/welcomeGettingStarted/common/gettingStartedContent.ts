@@ -172,7 +172,7 @@ export const walkthroughs: GettingStartedWalkthroughContent = [
 		isFeatured: true,
 		icon: setupIcon,
 		when: '!isWeb',
-		next: 'Beginner',
+		next: 'pearAISetupOptions',
 		content: {
 			type: 'steps',
 			steps: [
@@ -218,6 +218,42 @@ export const walkthroughs: GettingStartedWalkthroughContent = [
 						altText: "Empty image"
 					},
 					completionEvents: []
+				}
+			]
+		}
+	},
+	{
+		id: 'pearAISetupOptions',
+		isFeatured: false,
+		title: localize('gettingStarted.pearAISetup.title', "Finish your Setup"),
+		icon: setupIcon, // replace Icon
+		description: localize('gettingStarted.pearAISetup.description', "Finsih your Setup and Improve your Experience by Customizing your Settings"),
+		content: {
+			type: 'steps',
+			steps: [
+				{
+					id: 'setPath',
+					title: localize('gettingStarted.pearAISetup.path.title', "Add Pear to your PATH"),
+					description: localize('gettingStarted.pearAISetup.path.description', "This allows CLI use and many more features\n{0}", Button(localize('addToPath', "Do it for me"), 'command:workbench.action.pearAI.runAddPearToPath')),
+					media: {
+						type: 'svg', altText: 'VS Code extension marketplace with featured language extensions', path: 'extensions.svg' // replace media
+					},
+				},
+				{
+					id: 'desktopShortcut',
+					title: localize('gettingStarted.pearAISetup.desktopShortcut.title', "Enable Context menu shortcuts"),
+					description: localize('gettingStarted.pearAISetup.desktopShortcut.description', "Quickly open files from context menu with PearAI\n{0}", Button(localize('addShortcut', "Add desktop shortcut"), 'command:workbench.action.pearAI.runAddContextMenuShortcut')),
+					media: {
+						type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
+					},
+				},
+				{ // this should only be shown if a VSCode installation existed before
+					id: 'replaceVSCode',
+					title: localize('gettingStarted.pearAISetup.replaceVSCode.title', "Replace VSCode with Pear"),
+					description: localize('gettingStarted.pearAISetup.replaceVSCode.description', "We detected that you were using VSCode, do you want us to replace VSCode with Pear?\n{0}", Button(localize('replaceVS', "Replace"), 'command:workbench.action.pearAI.runReplaceVSCode')),
+					media: {
+						type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
+					},
 				}
 			]
 		}

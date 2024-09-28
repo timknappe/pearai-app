@@ -234,7 +234,7 @@ export const walkthroughs: GettingStartedWalkthroughContent = [
 				{
 					id: 'setPath',
 					title: localize('gettingStarted.pearAISetup.path.title', "Add Pear to Your PATH"),
-					description: localize('gettingStarted.pearAISetup.path.description', "This allows CLI use and many more features\n{0}", Button(localize('addToPath', "Do it for me"), 'command:workbench.action.pearAI.runAddPearToPath')),
+					description: localize('gettingStarted.pearAISetup.path.description', "This allows CLI use and many more features\n{0}", Button(localize('addToPath', "Do it for me"), 'command:workbench.action.installCommandLine')),
 					media: {
 						type: 'svg', altText: 'VS Code extension marketplace with featured language extensions', path: 'extensions.svg' // replace media
 					},

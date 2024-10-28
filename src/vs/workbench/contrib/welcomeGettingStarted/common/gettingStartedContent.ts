@@ -222,4 +222,41 @@ export const walkthroughs: GettingStartedWalkthroughContent = [
 			]
 		}
 	},
+	{
+		id: 'pearAISetupOptions',
+		isFeatured: false,
+		title: localize('gettingStarted.pearAISetup.title', "Configure Your Optional Settings"),
+		icon: setupIcon, // replace Icon
+		description: localize('gettingStarted.pearAISetup.description', "Finish your setup and improve your experience by customizing your settings"),
+		content: {
+			type: 'steps',
+			steps: [
+				{
+					id: 'setPath',
+					title: localize('gettingStarted.pearAISetup.path.title', "Add Pear to Your PATH"),
+					description: localize('gettingStarted.pearAISetup.path.description', "This allows CLI use and many more features\n{0}", Button(localize('addToPath', "Do it for me"), 'command:workbench.action.installCommandLine')),
+					media: {
+						type: 'svg', altText: 'VS Code extension marketplace with featured language extensions', path: 'extensions.svg' // replace media
+					},
+					completionEvents: ['onCommand:workbench.action.installCommandLine']
+				},
+				{
+					id: 'desktopShortcut',
+					title: localize('gettingStarted.pearAISetup.desktopShortcut.title', "Enable Context Menu Shortcuts"),
+					description: localize('gettingStarted.pearAISetup.desktopShortcut.description', "Quickly open files from the context menu with PearAI\n{0}", Button(localize('addShortcut', "Add Desktop Shortcut"), 'command:workbench.action.pearAI.runAddContextMenuShortcut')),
+					media: {
+						type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
+					},
+				},
+				{ // this should only be shown if a VSCode installation existed before
+					id: 'replaceVSCode',
+					title: localize('gettingStarted.pearAISetup.replaceVSCode.title', "Replace VSCode with Pear"),
+					description: localize('gettingStarted.pearAISetup.replaceVSCode.description', "We detected that you were using VSCode. Do you want us to replace VSCode with Pear?\n{0}", Button(localize('replaceVS', "Replace"), 'command:workbench.action.pearAI.runReplaceVSCode')),
+					media: {
+						type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
+					},
+				}
+			]
+		}
+	},
 ];

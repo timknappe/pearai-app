@@ -239,31 +239,31 @@ export const walkthroughs: GettingStartedWalkthroughContent = [
 						type: 'svg', altText: 'VS Code extension marketplace with featured language extensions', path: 'extensions.svg' // replace media
 					},
 					completionEvents: ['onCommand:workbench.action.installCommandLine']
-				},
-				{
-					id: 'desktopShortcut',
-					title: localize('gettingStarted.pearAISetup.desktopShortcut.title', "Enable Context Menu Shortcuts"),
-					description: localize('gettingStarted.pearAISetup.desktopShortcut.description', "Quickly open files from the context menu with PearAI\n{0}", Button(localize('addShortcut', "Add Desktop Shortcut"), 'command:workbench.action.pearAI.runAddContextMenuShortcut')),
-					media: {
-						type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
-					},
-				},
-				{
-					id: 'copySettingsFromVS',
-					title: localize('gettingStarted.pearAISetup.copySettingsFromVS.title', "Copy your VSCode settings & extensions"),
-					description: localize('gettingStarted.pearAISetup.replaceVSCode.description', "Continue right where you left off with Pear\n{0}", Button(localize('copyVsSettings', "Copy"), 'command:workbench.action.pearAI.runCopyVSCodeSettings')),
-					media: {
-						type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
-					},
-				},
-				{
-					id: 'replaceVSCode',
-					title: localize('gettingStarted.pearAISetup.replaceVSCode.title', "Replace VSCode with Pear"),
-					description: localize('gettingStarted.pearAISetup.replaceVSCode.description', "We detected that you were using VSCode. Do you want us to replace VSCode with Pear?\n{0}", Button(localize('replaceVS', "Replace"), 'command:workbench.action.pearAI.runReplaceVSCode')),
-					media: {
-						type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
-					},
-				}
+				} // ,
+				// { // this can be implemented as soon as the PR for Issue #5 exists
+				// 	id: 'desktopShortcut',
+				// 	title: localize('gettingStarted.pearAISetup.desktopShortcut.title', "Enable Context Menu Shortcuts"),
+				// 	description: localize('gettingStarted.pearAISetup.desktopShortcut.description', "Quickly open files from the context menu with PearAI\n{0}", Button(localize('addShortcut', "Add Desktop Shortcut"), 'command:workbench.action.pearAI.runAddContextMenuShortcut')),
+				// 	media: {
+				// 		type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
+				// 	},
+				// },
+				// { // this can be implemented as soon as the PR for Issue #58 exists
+				// 	id: 'copySettingsFromVS',
+				// 	title: localize('gettingStarted.pearAISetup.copySettingsFromVS.title', "Copy your VSCode settings & extensions"),
+				// 	description: localize('gettingStarted.pearAISetup.replaceVSCode.description', "Continue right where you left off with Pear\n{0}", Button(localize('copyVsSettings', "Copy"), 'command:workbench.action.pearAI.runCopyVSCodeSettings')),
+				// 	media: {
+				// 		type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
+				// 	},
+				// },
+				// { // this needs an entirely new implementation
+				// 	id: 'replaceVSCode',
+				// 	title: localize('gettingStarted.pearAISetup.replaceVSCode.title', "Replace VSCode with Pear"),
+				// 	description: localize('gettingStarted.pearAISetup.replaceVSCode.description', "We detected that you were using VSCode. Do you want us to replace VSCode with Pear?\n{0}", Button(localize('replaceVS', "Replace"), 'command:workbench.action.pearAI.runReplaceVSCode')),
+				// 	media: {
+				// 		type: 'svg', altText: 'Integrated terminal running a few npm commands', path: 'terminal.svg' // replace media
+				// 	},
+				// }
 			]
 		}
 	},
